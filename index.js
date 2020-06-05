@@ -35,26 +35,23 @@ tech.on('connection', (socket) => {
        tech.in(data.room).emit('message', `New user joined $data{data.room!}`);
    })
 
+   
    socket.on('message', (data) => {
-       console.log(`message: ${data.msg}`);
-   })
+        console.log('message ${data.msg}');
 
-        db.getChats.then( val => {
-            console.log(val);
-        });
+        var message = {
+            name: "User",
+            room: data.room,
+            text: data.msg
+        };
 
-        tech.in(data.room).emit('message', 'New user joined ${data.room} room!');
-      });
+        let insert = db.insertChats(message);
+        tech.in(data.room).emit('message', data.msg);
+    });
 
-    socket.on('message', (data) => {
-       console.log('message ${data.msg}');
+    db.getChats.then( val => {
+        console.log(val);
+    });
 
-       var message = {
-           name: "User",
-           room: data.room,
-           text: data.msg
-       };
-
-       let insert = db.insertChats(message);
-       tech.in(data.room).emit('message', data.msg);
-   });
+    tech.in(data.room).emit('message', 'New user joined ${data.room} room!');
+})
