@@ -1,11 +1,12 @@
-const app = require('express')();
+const express = require('express');
+const app = express();
 
 
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const port = process.env.PORT || 3000;
 const db = require('./queries');
-
+app.use(express.static('public'));
 
 
 server.listen(port, () => {
@@ -28,7 +29,9 @@ app.get('/css', (req, res) => {
     res.sendFile(__dirname + '/public/css.html');
 })
 
-
+app.get('/rooms', (req, res) => {
+    res.sendFile(__dirname + '/public/rooms.html');
+})
 
 // tech namespace
 const tech = io.of('/tech');
