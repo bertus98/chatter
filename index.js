@@ -33,6 +33,10 @@ app.get('/rooms', (req, res) => {
     res.sendFile(__dirname + '/public/rooms.html');
 })
 
+app.get('/index', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+})
+
 // tech namespace
 const tech = io.of('/tech');
 
