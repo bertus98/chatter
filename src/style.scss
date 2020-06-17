@@ -79,18 +79,25 @@ header{
 
 /* hamburger menu */
 .topnav {
+    width: 26.0416666667%;
     overflow: hidden;
-    min-height: 970px;
+    vertical-align: top;
     display: inline-block;
-    width: 20%;
-    border: 1px solid red;
+    position: absolute;
+    top: 60px;
+    section{
+      color: #fff;
+      width: 28.6%;
+      padding: 15px;
+      margin-left: 3%;
+      border-radius: 25px;;
+      box-sizing: border-box;
+      display: inline-block;
+      background-color: #1A78D1;;
+    }
   }
   
   .topnav a {
-    color: #fff;
-    text-align: center;
-    padding:20px;
-    background-color: #1A78D1;
   }
   
   .topnav a:hover {
@@ -153,19 +160,115 @@ header{
     }
   }
   
+
+
+
+
+
+
+
+#messages{
+margin-top: 50px;
+}
+
+
+#messages li{
+  color: #fff
+}
+
+
+footer{
+  width: 100%;
+  height: 150px;
+  padding: 20px 0;
+  border-radius: 30px 30px 0 0;
+  background-color: #1F1F1F;
+  position: fixed;
+  bottom: 0;
+}
+
+.sendButton{
+  width: 90.6666666667%;
+  border: none;
+  padding: 15px;
+  margin-left: 5%;
+  box-sizing: border-box;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #3C3C3C;
+}
+
+.sendIcon{
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  border: none;
+  border-radius: 100%;
+  top: 10px;
+  right: 8%;
+  position: absolute;
+  background-color: #007EF4;
+}
+
+
+
+
+
   @media screen and (max-width: 600px) {
 
     header{
-        h2{font-size: 24px;
-            padding-top: 38px;
-        }
-        h3{
-            font-size: 18px;
-        }
+      width: 100%;
+      height: 110px;
+      background-color: #1F1F1F;
+      position: absolute;
+      border-radius: 0  0 30px  30px;
+      text-align: center;
+      padding: 55px 0;
+      color: #fff;
+      figcaption{
+        width: 30%;
+        margin: -20px auto;
+        display: block;
+      }
+      h2{
+        font-size: 16px;
+        line-height: 0px;
+        display: inline-block;
+      }
+      h3{ 
+        font-size: 11px;
+        font-weight: 100;
+        line-height: 0px;
+        display: inline-block;
+      }
+  }
+
+
+  /* hamburger menu */
+  .topnav {
+    width: 70.0416666667%;
+    overflow: hidden;
+    vertical-align: top;
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    right: 35px;
+    section{
+      color: #fff;
+      width: 28.6%;
+      padding: 15px;
+      margin: 20px 0 0 3%;
+      border-radius: 25px;;
+      box-sizing: border-box;
+      display: inline-block;
+      background-color: #1A78D1;;
     }
+    i{
+      font-size: 28px;
+      color: #fff;
+    }
+  }
 
-
-  
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -183,5 +286,45 @@ header{
       display: block;
       text-align: left;
     }
+  /* end hamburger menu*/
+
+  .chooseGroup{
+    width: 100%;
+    padding: 120px 0px;
+    box-sizing: border-box;
+    background-color: #292929;
+  
+    section{
+      width: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+      figcaption{
+        width: 75%;
+        display: inline-block;
+        h4{
+          font-size: 16px;
+          color: #fff;
+        }
+        h5{
+          font-size: 17px;
+          font-weight: 50;
+          color: rgba(#fff, 0.3);
+        }
+      }
+      p{
+        color: #fff;
+        vertical-align: top;
+        display: inline-block;
+      }
+      i{
+        color: rgba(#fff, 0.3);
+        margin-left: 3%;
+        font-size: 22px;
+        vertical-align: top;
+      }
+    }
+  }
+
   
   }
+  
