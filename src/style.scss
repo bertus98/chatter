@@ -1,5 +1,11 @@
+@import 'base';
+
 body{
     background-color: #292929;
+}
+
+.bgChatRooms{
+  background-color: ;
 }
 
 header{
@@ -31,7 +37,8 @@ header{
   width: 29.1666666667%;
   padding: 210px 90px;
   box-sizing: border-box;
-  background-color: #3E3E3E;
+  display: inline-block;
+  background-color: $lightGray;
 
   section{
     width: 100%;
